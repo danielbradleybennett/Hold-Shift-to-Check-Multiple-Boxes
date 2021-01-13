@@ -109,6 +109,13 @@
         //loop over every single checkbox
         checkboxes.forEach(checkbox => {
           console.log(checkboxes);
+          if (checkbox === this || checkbox === lastChecked) {
+            inBetween = !inBetween;
+            console.log('Starting to check the inbetween!');
+          }
+          if (inBetween) {
+            checkbox.checked = true;
+          }
         });
 
       }
